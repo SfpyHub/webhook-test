@@ -17,6 +17,9 @@ const (
 
 	envWebhookSecretKey     string = "WEBHOOK_SECRET"
 	defaultWebhookSecretKey string = "780a1fa7d8a16d5479edd427320116ba2ea2f49a2dc39f1a924390ca4bf36c7b"
+
+	envSfpyApiKey     string = "SFPY_API_KEY"
+	defaultSfpyApiKey string = "f012313568a6ca280479d2b521814c75ff373e4d68ba2ac9c81cb085a62a4578"
 )
 
 // Variables set during compile via -X options
@@ -74,11 +77,13 @@ func main() {
 
 	environment := utils.EnvString(envAPIEnvironment, defaultAPIEnvironment)
 	secretkey := utils.EnvString(envWebhookSecretKey, defaultWebhookSecretKey)
+	apikey := utils.EnvString(envSfpyApiKey, defaultSfpyApiKey)
 
 	config := server.Config{
 		Environment:      environment,
 		HTTPCmdAddr:      *httpCmdAddr,
 		WebhookSecretKey: secretkey,
+		SfpyApiKey:       apikey,
 	}
 
 	serv, err := server.NewServer(config, logger)

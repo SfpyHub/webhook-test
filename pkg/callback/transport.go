@@ -29,9 +29,20 @@ func MakeHandler(es Service, logger log.Logger) http.Handler {
 		opts...,
 	)
 
+	var createEndpoint endpoint.Endpoint
+	createEndpoint = makeCreateEndpoint(es)
+
+	createHandler := kithttp.NewServer(
+		createEndpoint,
+		encoder_decoder.DecodePostRequest,
+		encoder_decoder.EncodeResponse,
+		opts...,
+	)
+
 	r := mux.NewRouter()
 
 	r.Handle("/v1/webhook/respond", respondHandler).Methods("POST")
+	r.Handle("/v1/webhook/create", createHandler).Methods("POST")
 
 	return r
 }

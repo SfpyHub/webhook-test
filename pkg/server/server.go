@@ -16,6 +16,7 @@ type Config struct {
 	Environment      string
 	HTTPCmdAddr      string
 	WebhookSecretKey string
+	SfpyApiKey       string
 }
 
 type server struct {

@@ -8,4 +8,5 @@ import (
 
 type Service interface {
 	Respond(ctx context.Context, request *definitions.Request) (interface{}, error)
+	Create(ctx context.Context, request *definitions.Request) (interface{}, error)
 }

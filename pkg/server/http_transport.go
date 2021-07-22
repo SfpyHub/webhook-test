@@ -4,6 +4,7 @@ import (
 	"net/http"
 
 	"github.com/go-kit/kit/log"
+	"github.com/sfpyhub/go-sfpy/sfpy"
 	"github.com/sfpyhub/webhook-test/pkg/callback"
 )
 
@@ -11,6 +12,7 @@ type httpTransport struct {
 	logger log.Logger
 	addr   string
 	secret string
+	apikey string
 }
 
 // NewHTTPTransport <>
@@ -21,14 +23,17 @@ func NewHTTPTransport(config Config, logger log.Logger) (RunCloser, error) {
 		logger: logger,
 		addr:   config.HTTPCmdAddr,
 		secret: config.WebhookSecretKey,
+		apikey: config.SfpyApiKey,
 	}, nil
 }
 
 func (t *httpTransport) Run() error {
 	logger := log.With(t.logger, "function", "Run")
 
+	client := sfpy.NewClient(t.apikey, t.secret)
+
 	var cs callback.Service
-	cs = callback.NewCallbackService(t.logger, t.secret)
+	cs = callback.NewCallbackService(t.logger, client)
 
 	mux := http.NewServeMux()
 

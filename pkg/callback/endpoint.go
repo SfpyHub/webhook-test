@@ -17,3 +17,14 @@ func makeRespondEndpoint(service Service) endpoint.Endpoint {
 		return res, nil
 	}
 }
+
+func makeCreateEndpoint(service Service) endpoint.Endpoint {
+	return func(ctx context.Context, request interface{}) (interface{}, error) {
+		req := request.(*definitions.Request)
+		res, err := service.Create(ctx, req)
+		if err != nil {
+			return nil, err
+		}
+		return res, nil
+	}
+}
