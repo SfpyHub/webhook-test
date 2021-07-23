@@ -384,6 +384,8 @@ github.com/sfpyhub/go-sfpy v0.0.0-20210722111253-b63e8c0ab47a h1:n0IwjaRfCEyEAEj
 github.com/sfpyhub/go-sfpy v0.0.0-20210722111253-b63e8c0ab47a/go.mod h1:lHFEim2AAw/hhxFKl81/QH3XmZX6ZS9vuNve9bVXIxk=
 github.com/sfpyhub/go-sfpy v0.0.0-20210722144818-8f6bcc6c617a h1:u4r4Go2cpAeGy701T70xBZj0CNhgtnQ3X7CRvmrN7SQ=
 github.com/sfpyhub/go-sfpy v0.0.0-20210722144818-8f6bcc6c617a/go.mod h1:lHFEim2AAw/hhxFKl81/QH3XmZX6ZS9vuNve9bVXIxk=
+github.com/sfpyhub/go-sfpy v0.0.0-20210722145656-9528e984ad79 h1:nYn6lZf3tTViIoG5cM83aMQbw+yyhGiLu5u82oxIS+Q=
+github.com/sfpyhub/go-sfpy v0.0.0-20210722145656-9528e984ad79/go.mod h1:lHFEim2AAw/hhxFKl81/QH3XmZX6ZS9vuNve9bVXIxk=
 github.com/sfpyhub/notify v0.0.0-20210716091622-7fd129f289fc h1:ayLmgaLuSBieaJe844jVetfZfYnP2Jd21/Xpih0E2PM=
 github.com/sfpyhub/notify v0.0.0-20210716091622-7fd129f289fc/go.mod h1:Q0ZNGKuA/ugH2jHt1rATfqtQ/yMGsa8b+cu1N3tgbJ0=
 github.com/shopspring/decimal v0.0.0-20180709203117-cd690d0c9e24/go.mod h1:M+9NzErvs504Cn4c5DxATwIqPbtswREoFCre64PpcG4=

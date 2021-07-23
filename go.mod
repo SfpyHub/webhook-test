@@ -14,7 +14,7 @@ require (
 	github.com/gorilla/mux v1.7.3
 	github.com/jinzhu/copier v0.3.2 // indirect
 	github.com/leodido/go-urn v1.2.1 // indirect
-	github.com/sfpyhub/go-sfpy v0.0.0-20210722144818-8f6bcc6c617a
+	github.com/sfpyhub/go-sfpy v0.0.0-20210722145656-9528e984ad79
 	github.com/sfpyhub/notify v0.0.0-20210716091622-7fd129f289fc
 	github.com/twinj/uuid v1.0.0 // indirect
 	gopkg.in/go-playground/validator.v9 v9.31.0 // indirect
