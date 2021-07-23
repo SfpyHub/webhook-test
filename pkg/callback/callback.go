@@ -59,10 +59,12 @@ func (as *callbackService) Create(ctx context.Context, request *definitions.Requ
 		return nil, err
 	}
 
-	order := responses.Request{}
+	order := responses.Order{}
 	if err := json.Unmarshal(response.Data, &order); err != nil {
 		return nil, err
 	}
+
+	as.client.ConstructLink(order.Token)
 
 	return &order, nil
 }
